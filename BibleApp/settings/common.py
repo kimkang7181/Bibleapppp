@@ -5,10 +5,10 @@ with open(os.path.join(BASE_DIR, 'secret.json'), 'r') as f:
     secret = json.loads(f.read())
 
 def get_secret(setting, secret=secret):
-try:
-return secret[setting]
-except:
-msg = "Set key '{0}' in secret.json".format(setting)
+    try:
+        return secret[setting]
+    except:
+        msg = "Set key '{0}' in secret.json".format(setting)
 
 SECRET_KEY = get_secret('SECRET_KEY')
 

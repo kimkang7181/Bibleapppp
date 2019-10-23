@@ -1,4 +1,4 @@
-
+import json
 import os
 with open(os.path.join(BASE_DIR, 'secret.json'), 'r') as f:
 secret = json.loads(f.read())

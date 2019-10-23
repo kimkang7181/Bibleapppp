@@ -1,16 +1,17 @@
 import json
 import os
-with open(os.path.join(BASE_DIR, 'secret.json'), 'r') as f:
-secret = json.loads(f.read())
+# with open(os.path.join(BASE_DIR, 'secret.json'), 'r') as f:
+# secret = json.loads(f.read())
 
 
-def get_secret(setting, secret=secret):
-try:
-return secret[setting]
-except:
-msg = "Set key '{0}' in secret.json".format(setting)
+# def get_secret(setting, secret=secret):
+# try:
+# return secret[setting]
+# except:
+# msg = "Set key '{0}' in secret.json".format(setting)
 
-SECRET_KEY = get_secret('SECRET_KEY')
+# SECRET_KEY = get_secret('SECRET_KEY')
+SECRET_KEY = "hxg-!kp%kepzmbj)00_=bo-w-8vc@1#+2h6il(&cp@sxf60b_%"
 
 ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE_DIR = os.path.dirname(ROOT_DIR)

@@ -1,6 +1,9 @@
 import json
 import os
 
+ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.dirname(ROOT_DIR)
+
 with open(os.path.join(BASE_DIR, 'secret.json'), 'r') as f:
     secret = json.loads(f.read())
 
@@ -12,8 +15,7 @@ def get_secret(setting, secret=secret):
 
 SECRET_KEY = get_secret('SECRET_KEY')
 
-ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-BASE_DIR = os.path.dirname(ROOT_DIR)
+
 
 
 DEBUG = True

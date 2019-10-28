@@ -7,6 +7,7 @@ class Post(models.Model):
     content = models.TextField()
     file = models.FileField()
     image = models.ImageField()
+    
 
     def __str__(self):
         return self.title
